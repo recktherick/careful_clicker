@@ -1,0 +1,111 @@
+.circle {
+  position: relative;
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  border:2px solid black;
+  margin: auto;
+  background-color: #8FBC94;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+  user-select: none;
+  font-size="3";
+}
+.gem_btn {
+  position: relative;
+  height:35px;
+  width:35px;
+  border-radius:50%;
+  border:2px solid black;
+  margin: auto;
+  background-color: #009999;
+  font-family: "Lucida Console", "Courier New", monospace;
+  user-select: none
+}
+
+.core {
+  position: relative;
+  margin: auto;
+  font-size: 20;
+  font-color: #FFFFFF;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align: center;
+}
+.info_btn {
+width: 20px;
+height: 20px;
+border-radius: 50%;
+border: 2px solid black;
+background-color: #881111;
+}
+.msg {
+font-color: #FF0000;
+font-size: 10;
+  user-select: none;
+}
+.msg2 {
+  user-select: none;
+}
+.gem_info {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+border: 2px solid black;
+background-color: #881111;
+left: 10px;
+}
+.exp_btn {
+  position: relative;
+  height:35px;
+  width:35px;
+  border-radius:50%;
+  border:2px solid black;
+  margin: auto;
+  background-color: #009999;
+  font-family: "Lucida Console", "Courier New", monospace;
+  user-select: none
+}
+.exp_info {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+border: 2px solid black;
+background-color: #881111;
+left: 10px;
+}
+.ath_btn {
+  position: absolute;
+  height:35px;
+  width:35px;
+  border-radius:50%;
+  border:2px solid black;
+  background-color: #009999;
+  font-family: "Lucida Console", "Courier New", monospace;
+  user-select: none;
+  top: 72%;
+  left: 618px;
+}
+.ath_info {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+border: 2px solid black;
+background-color: #881111;
+left: 10px;
+position: absolute;
+}
+.exp_border {
+  background-color: #00FFFF;
+  width: 200px;
+  height: 90px;
+  border: 2px solid black;
+  border-radius: 15%;
+  position: relative;
+}
+.exp_bar {
+  width: 0px;
+  height: 60px;
+  background-color: #000088;
+  position: absolute;
+  top: 17%;
+}
