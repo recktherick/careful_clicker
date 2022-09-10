@@ -4,16 +4,17 @@
 <link rel="stylesheet" href="styles.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 
-<body style="background-image: linear-gradient(#56445D, #006666)">
+<body>
 <br><br>
 
 
 
-<div class="exp_border" id="exp_border"><div class="exp_bar" id="exp_bar"></div></div>
+<div class="exp_border" id="exp_border"><div class="exp_max_bar" id="exp_max_bar"><div class="exp_bar" id="exp_bar"></div></div></div>
 <div class="msg3" id="msg3">0</div>out of<div class="exp_max_msg" id="exp_max_msg">100</div><br><br>
 <font color="#000088">level</font><div class="level_msg" id="level_msg"> 1</div>
 
@@ -53,170 +54,19 @@
 <br><br><br><br><br>
 
 
-<div class="black_element" id="black_element"><i class="fa fa-gear" style="font-size:60px;"></i></div>
-
-
-
-<script>
-let black_element = document.getElementById("black_element");
-let event = 0;
-let info = document.getElementById("info");
-info.style.display = "none";
-let beans = 1;
-let x = 0;
-let info_btn = document.getElementById("info_btn");
-let workers = 0;
-let exp = 0;
-let num = 0;
-let level = 1;
-let gems = 0;
-let exp_max = 100;
-let gem_info = document.getElementById("gem_info");
-let exp_info = document.getElementById("exp_info");
-let ath_info = document.getElementById("ath_info");
-let circle = document.getElementById("circle");
-let exp_btn = document.getElementById("exp_btn");
-let exp_bar = document.getElementById("exp_bar");
-info_btn.addEventListener("click", function(){
-    toggle_info("The Button, One and Only, Here's a Challenge, Beat the Game Without Clicking it. click for enjoyment", "info", 1);
-}, false);
-
-gem_info.addEventListener("click", function() {
-    toggle_info("I guess I was too lazy to figue out a better premium currency than gems. 4% chance of gem on click", "info", 1);
-}, false);
-
-exp_info.addEventListener("click", function() {
-    toggle_info("did you know exp stands for evil xylophone points? *sigh* undertale did it years ago. click for exp", "info", 1);
-}, false);
-
-ath_info.addEventListener("click", function() {
-    toggle_info("Athority gives you control over more buttons, just don't get to the negitives, I dont want to clean up anything. click for athority", "info", 1);
-}, false);
-
-circle.addEventListener("click", function() {
-    add(1, num, "msg", "num");
-}, false);
-
-exp_btn.addEventListener("click", function() {
-    add(1, exp, "msg3", "exp");
-}, false);
-    
+<div class="black_element" id="black_element"><div class="gear_hover" id="gear_hover"><i class="fa fa-gear" i id="gear" style="font-size:60px;"></i></div></div>
 
 
 
 
-function transition() {
-  if (x == 0 && event == 0) {
-    event = 1;
-    options_btn.style.width = '200px';
-    options_btn.style.height = '200px';
-    options_btn.style.borderColor = 'black';
-    options_btn.style.transform = 'rotate(460deg)';
-    setTimeout(() => {  toggle_info("‎ ‎", "black_element", 0); }, 2000);
-    setTimeout(() => {  options_btn.style.backgroundColor = 'white'; }, 2000);
-    setTimeout(() => {  x = 1; }, 1000);
-    setTimeout(() => {  event = 0; }, 2000);
-
-  }
-  else if (x == 1 && event == 0) {
-    event = 1;
-    setTimeout(() => {  toggle_info(" ‎", "black_element", 0); }, 1000);
-    options_btn.style.transform = 'rotate(0deg)';
-    options_btn.style.borderColor = 'white';
-    options_btn.style.backgroundColor = 'black';
-    options_btn.style.width = 100 + "px";
-    options_btn.style.height = 20 + "px";
-    x = 0;
-    setTimeout(() => {  event = 0; }, 2000);
-  }
-}
-
-
-
-
-function toggle_info(info2, id, is_info) {
-	 let e = document.getElementById(id);
-	 if (is_info == 1) {
-	   e.innerHTML = info2;
-	 }
-       if (e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
-
-
-	    function gem_check(){
-		  let chance = Math.floor(Math.random() * 50);
-		  if (chance > 47) {
-		  gems = ++gems;
-		  document.getElementById("msg2").innerHTML = gems;
-	    }
-	    }
-	    function add(amount, type, display, type2){
-		  parseInt(amount);
-		  parseInt(type);
-		  type = ++type;
-	        document.getElementById(display).innerHTML = type;
-		  if (type2 == "num") {
-		  num = document.getElementById(display).innerHTML;
-	    }
-		  else if (type2 == "exp") {
-		  exp = document.getElementById(display).innerHTML;
-		  bar_increase();
-	    }
-	    }   
-
-
-
-
-	    function bar_increase() {
-		let bar_percent = Math.floor(exp/exp_max * 100)/100
-		exp_bar.style.width = bar_percent * 200 + "px";
-		if (exp >= exp_max) {
-		  level_up();
-	    }
-	    }
-	    
-
-	    function level_up() {
-		exp = exp - exp_max;
-		exp_max = exp_max * 2;
-		bar_increase();
-		document.getElementById("exp_max_msg").innerHTML = exp_max;
-		level = ++level;
-		document.getElementById("level_msg").innerHTML = level;
-	    }
-		
-
-
-	    var gem_btn = document.getElementById("gem_btn");
-	    gem_btn.addEventListener("click", gem_check);
-
-
-</script>
 <div class="options_btn" id="options_btn">
 <div class="arrow_prt_1" id="arrow_prt_1"></div>
 <div class="arrow_prt_2" id="arrow_prt_2"></div>
 </div>
 
 
-<script>
-
-  let options_btn = document.getElementById("options_btn");
-
-options_btn.addEventListener("click", function() {
-    transition();
-}, false);
 
 
-
-
-
- 
-
-</script>
-
-
+<script src="script.js"></script>
 </body>
 </html>
